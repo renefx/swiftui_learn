@@ -28,26 +28,28 @@ struct TransparentGradient: View {
                 HStack {
                     Color(.clear)
                         .background(redGradient)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                     
                     Color(.clear)
                         .background(redGradient)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                     
                     Color(.clear)
                         .background(redGradient)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                         .blur(radius: 20)
                     
                     Color(.clear)
                         .background(redGradient)
                         .opacity(0.9)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                         .blur(radius: 20)
-                }.padding(/*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                }
+                .frame(maxWidth: UIScreen.main.bounds.width - 20)
+                .padding(.bottom, 10)
                 
                 Text("Gradient is the first\nthe BLUR effect stronger accent")
                     .multilineTextAlignment(.center)
@@ -55,25 +57,26 @@ struct TransparentGradient: View {
                 HStack {
                     
                     redGradient
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                     
                     redGradient
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                     
                     redGradient
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                         .blur(radius: 10)
                     
                     redGradient
                         .opacity(0.9)
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .aspectRatio(1, contentMode: .fit)
                         .clipShape(Circle())
                         .blur(radius: 10)
                 }
+                .frame(maxWidth: UIScreen.main.bounds.width - 20)
             }
-            .frame(width: UIScreen.main.bounds.width - 20)
+            .frame(maxWidth: UIScreen.main.bounds.width - 20)
             .clipped()
             
         }

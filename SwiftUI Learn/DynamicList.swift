@@ -15,7 +15,7 @@ struct DynamicList: View {
             Text("Select a color page from the links.")
                 .background(Color.yellow)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: -40, trailing: 0))
-                .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                .zIndex(1.0)
             NavigationView {
                 ListNavigation()
             }
