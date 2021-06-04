@@ -28,10 +28,9 @@ struct BlurredCircle: View {
     
     var body: some View {
         diagonalGradient
+            .aspectRatio(1, contentMode: .fit)
+            .frame(width: diameter)
             .clipShape(Circle())
-            .frame(width: diameter,
-                   height: diameter,
-                   alignment: .topLeading)
             .opacity(0.5)
             .shadow(radius: 5, x: 10, y: 10)
     }
