@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_LearnApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DragDropGameView()
         }
     }
 }

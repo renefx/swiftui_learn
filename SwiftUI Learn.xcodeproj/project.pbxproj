@@ -19,8 +19,12 @@
 		02D8979E2669632000C9F8FF /* FormerElementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8979D2669632000C9F8FF /* FormerElementsCard.swift */; };
 		02D897A02669640E00C9F8FF /* LatterElementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8979F2669640E00C9F8FF /* LatterElementsCard.swift */; };
 		02D897A42669F8F700C9F8FF /* ColoredText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A32669F8F700C9F8FF /* ColoredText.swift */; };
+		02D897A62669FB0400C9F8FF /* DragViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A52669FB0400C9F8FF /* DragViewModel.swift */; };
+		02D897A82669FEA100C9F8FF /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A72669FEA100C9F8FF /* TargetView.swift */; };
+		02D897AA2669FF0300C9F8FF /* DragObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A92669FF0300C9F8FF /* DragObjectView.swift */; };
+		02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897AB2669FF6400C9F8FF /* WinMessage.swift */; };
 		02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADCD266179D70013702F /* SwiftUI_LearnApp.swift */; };
-		02F7ADD0266179D70013702F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADCF266179D70013702F /* ContentView.swift */; };
+		02F7ADD0266179D70013702F /* DragDropGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADCF266179D70013702F /* DragDropGameView.swift */; };
 		02F7ADD2266179DC0013702F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F7ADD1266179DC0013702F /* Assets.xcassets */; };
 		02F7ADD5266179DC0013702F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F7ADD4266179DC0013702F /* Preview Assets.xcassets */; };
 		02F7ADE32661D3E30013702F /* DynamicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADE22661D3E30013702F /* DynamicList.swift */; };
@@ -39,9 +43,13 @@
 		02D8979D2669632000C9F8FF /* FormerElementsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormerElementsCard.swift; sourceTree = "<group>"; };
 		02D8979F2669640E00C9F8FF /* LatterElementsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatterElementsCard.swift; sourceTree = "<group>"; };
 		02D897A32669F8F700C9F8FF /* ColoredText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredText.swift; sourceTree = "<group>"; };
+		02D897A52669FB0400C9F8FF /* DragViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewModel.swift; sourceTree = "<group>"; };
+		02D897A72669FEA100C9F8FF /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
+		02D897A92669FF0300C9F8FF /* DragObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragObjectView.swift; sourceTree = "<group>"; };
+		02D897AB2669FF6400C9F8FF /* WinMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinMessage.swift; sourceTree = "<group>"; };
 		02F7ADCA266179D70013702F /* SwiftUI Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F7ADCD266179D70013702F /* SwiftUI_LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_LearnApp.swift; sourceTree = "<group>"; };
-		02F7ADCF266179D70013702F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02F7ADCF266179D70013702F /* DragDropGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropGameView.swift; sourceTree = "<group>"; };
 		02F7ADD1266179DC0013702F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F7ADD4266179DC0013702F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02F7ADD6266179DC0013702F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +89,7 @@
 		025E18CF26688DF500AB894E /* Drag and drop */ = {
 			isa = PBXGroup;
 			children = (
-				02F7ADCF266179D70013702F /* ContentView.swift */,
+				02D897AD2669FF9900C9F8FF /* Game */,
 				025E18D22668AAEE00AB894E /* ViewOverAnother.swift */,
 			);
 			path = "Drag and drop";
@@ -116,6 +124,18 @@
 				02D8979A266959A600C9F8FF /* WideTextTitle.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		02D897AD2669FF9900C9F8FF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				02F7ADCF266179D70013702F /* DragDropGameView.swift */,
+				02D897AB2669FF6400C9F8FF /* WinMessage.swift */,
+				02D897A92669FF0300C9F8FF /* DragObjectView.swift */,
+				02D897A52669FB0400C9F8FF /* DragViewModel.swift */,
+				02D897A72669FEA100C9F8FF /* TargetView.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		02F7ADC1266179D70013702F = {
@@ -225,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F7ADD0266179D70013702F /* ContentView.swift in Sources */,
+				02F7ADD0266179D70013702F /* DragDropGameView.swift in Sources */,
 				02D897A42669F8F700C9F8FF /* ColoredText.swift in Sources */,
 				02D8979E2669632000C9F8FF /* FormerElementsCard.swift in Sources */,
 				02D897A02669640E00C9F8FF /* LatterElementsCard.swift in Sources */,
@@ -233,9 +253,13 @@
 				02D89797266948DF00C9F8FF /* GradientCircle.swift in Sources */,
 				02F7ADE32661D3E30013702F /* DynamicList.swift in Sources */,
 				028DCC402665CE660052694D /* Glassmorphism.swift in Sources */,
+				02D897A82669FEA100C9F8FF /* TargetView.swift in Sources */,
+				02D897A62669FB0400C9F8FF /* DragViewModel.swift in Sources */,
 				02D897992669517100C9F8FF /* CardGlass.swift in Sources */,
+				02D897AA2669FF0300C9F8FF /* DragObjectView.swift in Sources */,
 				028DCC432665CEEB0052694D /* PopupView.swift in Sources */,
 				02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */,
+				02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */,
 				025E18D32668AAEE00AB894E /* ViewOverAnother.swift in Sources */,
 				02D8979B266959A600C9F8FF /* WideTextTitle.swift in Sources */,
 				0234C2E42667FB0D00D9FFB7 /* TransparentGradient.swift in Sources */,
