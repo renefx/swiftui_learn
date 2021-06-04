@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Model: ObservableObject {
+class DragViewModel: ObservableObject {
     @Published var dragOffset = CGSize.zero
     @Published var objectFrame = CGRect()
     @Published var targetFrame = CGRect()
@@ -15,7 +15,7 @@ class Model: ObservableObject {
     
     func isAbove(_ this: CGRect, _ other: CGRect) -> Bool {
         if this.intersects(other) {
-            return percentageAbove(this, other) > 20
+            return percentageAbove(this, other) > 60
         }
         return false
     }
@@ -32,16 +32,19 @@ class Model: ObservableObject {
 }
 
 struct ContentView: View {
-    @StateObject var model = Model()
+    @StateObject var model = DragViewModel()
     
-    private let backgroundGradient = LinearGradient(
-                            gradient: Gradient(colors: [
-                                                Color(#colorLiteral(red: 0.9760726094, green: 0.7678329349, blue: 0.7517178655, alpha: 1)),
-                                                Color(#colorLiteral(red: 0.9758653045, green: 0.976285398, blue: 0.9658823609, alpha: 1)),
-                                                Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))]),
-                            startPoint: .topTrailing,
-                            endPoint: .bottomLeading)
-    
+    private let backgroundGradient = RadialGradient(
+                                        gradient:
+                                            Gradient(colors:
+                                                        [Color(#colorLiteral(red: 0.9205427766, green: 0.1769670546, blue: 0.475453496, alpha: 1)),
+                                                         Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)),
+                                                         Color(#colorLiteral(red: 0.1973657012, green: 0.7339946628, blue: 0.9673123956, alpha: 1)),
+                                                         Color(#colorLiteral(red: 0.6500930786, green: 0.9558833241, blue: 0.9664952159, alpha: 1))]),
+                                        center: .bottom,
+                                        startRadius: 50,
+                                        endRadius: 500)
+
     var body: some View {
         ZStack(alignment: .center) {
             self.backgroundGradient
@@ -57,11 +60,14 @@ struct ContentView: View {
 }
 
 struct WinMessage: View {
-    @ObservedObject var model: Model
+    @ObservedObject var model: DragViewModel
     
     var body: some View {
         ZStack(alignment: .center) {
-            ColoredText(text: "CONGRATS 🥳", background: .green)
+            ColoredText(text: "CONGRATS", textColors: [Color(#colorLiteral(red: 0.9205427766, green: 0.1769670546, blue: 0.475453496, alpha: 1)),
+                                                            Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)),
+                                                            Color(#colorLiteral(red: 0.1973657012, green: 0.7339946628, blue: 0.9673123956, alpha: 1)),
+                                                            Color(#colorLiteral(red: 0.6500930786, green: 0.9558833241, blue: 0.9664952159, alpha: 1))], background: .white)
         }
         .frame(
             maxWidth: .infinity,
@@ -76,11 +82,11 @@ struct WinMessage: View {
 }
 
 struct DragObjectView: View {
-    @ObservedObject var model: Model
+    @ObservedObject var model: DragViewModel
     
     private let animation = Animation.easeOut(duration: 0.2)
     
-    private let cardColors = [
+    private let circleColors = [
         Color(#colorLiteral(red: 0.3310189843, green: 0.6638725996, blue: 0.8391952515, alpha: 1)),
         Color(#colorLiteral(red: 0.3968602419, green: 0.4324681163, blue: 0.9220615029, alpha: 1)),
         Color(#colorLiteral(red: 0.7347484827, green: 0.2661170661, blue: 0.9037510753, alpha: 1))]
@@ -88,7 +94,7 @@ struct DragObjectView: View {
     var body: some View {
         ZStack() {
             
-            GradientCircle(colors: cardColors)
+            GradientCircle(colors: circleColors)
                 .frame(width: 80)
                 .overlay(
                     GeometryReader { geometry -> Color in
@@ -98,6 +104,10 @@ struct DragObjectView: View {
                         return Color.clear
                     }
                 )
+                .overlay(
+                    Text("DRAG")
+                        .fontWeight(.black)
+                        .foregroundColor(.white))
                 .offset(model.dragOffset)
                 .gesture(
                     DragGesture()
@@ -125,11 +135,16 @@ struct DragObjectView: View {
 }
 
 struct TargetView: View {
-    @ObservedObject var model: Model
+    @ObservedObject var model: DragViewModel
+    
+    private let circleColors = [
+        Color.white.opacity(0.7),
+        Color.white.opacity(0.01)]
     
     var body: some View {
         ZStack() {
-            ColoredText(text: "🎯 HERE", background: .green)
+            GradientCircle(colors: circleColors)
+                .frame(width: 90)
                 .overlay(
                     GeometryReader { geometry -> Color in
                         DispatchQueue.main.async {
@@ -138,6 +153,10 @@ struct TargetView: View {
                         return Color.clear
                     }
                 )
+                .overlay(
+                    Text("HERE")
+                        .fontWeight(.black)
+                        .foregroundColor(.white))
         }
         .frame(
             maxWidth: .infinity,
