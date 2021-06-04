@@ -16,7 +16,7 @@ struct CardGlass: View {
         gradientBackground = LinearGradient(
                                 gradient: .init(colors: colors),
                                 startPoint: .topLeading,
-                                endPoint: .bottomTrailing)
+                                endPoint: .topTrailing)
     }
     
     var body: some View {
