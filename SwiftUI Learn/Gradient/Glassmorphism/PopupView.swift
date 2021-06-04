@@ -10,7 +10,7 @@ import SwiftUI
 struct PopupView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
-            Color.white.opacity(0.3)
+            Color.white.opacity(0.6)
                 .frame(width: 300, height: 400)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(radius: 5, x: 10, y: 10)

@@ -20,15 +20,6 @@ struct GradientCircle: View {
     }
 }
 
-extension View {
-    public func gradientForeground(colors: [Color]) -> some View {
-        self.overlay(LinearGradient(gradient: .init(colors: colors),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing))
-            .mask(self)
-    }
-}
-
 struct GradientCircle_Previews: PreviewProvider {
     static var previews: some View {
         GradientCircle()

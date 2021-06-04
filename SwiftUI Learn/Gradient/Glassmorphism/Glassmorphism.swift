@@ -16,16 +16,19 @@ struct Glassmorphism: View {
                         .easeInOut(duration: 8.0)
                         .repeatForever(autoreverses: true)
     
-    private let colorsBigCircle = [Color(#colorLiteral(red: 0.3057210445, green: 0.2507614791, blue: 0.5371499062, alpha: 1)),
-                                   Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)).opacity(0.8),
-                                   Color(#colorLiteral(red: 0, green: 0.9756456017, blue: 0.7367306352, alpha: 1))]
+    private let colorsBigCircle = [Color(#colorLiteral(red: 0.3447287083, green: 0.2482087016, blue: 0.6252382994, alpha: 1)),
+                                   Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)),
+                                   Color(#colorLiteral(red: 0.712551415, green: 0.8789604902, blue: 0.9714465737, alpha: 1))]
+    
+    private let colorsSmallCircle = [Color(#colorLiteral(red: 1, green: 0.1672445834, blue: 0.1415077448, alpha: 1)),
+                                   Color(#colorLiteral(red: 0.3951289058, green: 0.7672771811, blue: 0.9481498599, alpha: 1))]
     private let diameterBigCircle: CGFloat = 300
     
     private let backgroundGradient = LinearGradient(
                             gradient: Gradient(colors: [
-                                                Color(#colorLiteral(red: 0, green: 0.926546216, blue: 0.8343044519, alpha: 1)).opacity(0.4),
-                                                Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)).opacity(0.8),
-                                                Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)).opacity(0.9)]),
+                                                Color(#colorLiteral(red: 1, green: 0.1672445834, blue: 0.1415077448, alpha: 1)),
+                                                Color(#colorLiteral(red: 0.3951289058, green: 0.7672771811, blue: 0.9481498599, alpha: 1)),
+                                                Color(#colorLiteral(red: 0.2244821191, green: 0.236559689, blue: 0.5273380876, alpha: 1))]),
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing)
     
@@ -33,7 +36,7 @@ struct Glassmorphism: View {
         ZStack {
             self.backgroundGradient
             
-            BlurredCircle()
+            BlurredCircle(colorsSmallCircle)
                 .offset(x: offsetX1, y: offsetY1)
                 .onAppear {
                     withAnimation(animation) {
@@ -44,7 +47,6 @@ struct Glassmorphism: View {
             
             BlurredCircle(colorsBigCircle, diameter: diameterBigCircle)
                 .offset(x: offsetBigBall.0, y: offsetBigBall.1)
-                .blur(radius: 2.0)
                 .onAppear {
                     withAnimation(animation) {
                         offsetBigBall.1 += 500
