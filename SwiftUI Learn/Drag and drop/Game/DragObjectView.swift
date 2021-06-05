@@ -40,7 +40,6 @@ struct DragObjectView: View {
                         .onChanged { gesture in
                             model.dragOffset = gesture.translation
                             if model.isAbove(model.objectFrame, model.targetFrame) {
-                                print("\(model.objectFrame)\n\(model.targetFrame)")
                                 model.won = true
                             }
                         }
