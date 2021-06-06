@@ -49,13 +49,18 @@ struct DragObjectView: View {
                     DragGesture()
                         .onChanged { gesture in
                             model.dragOffset = gesture.translation
+                            calculateDrag = true
                             if model.isAbove(model.objectFrame, model.targetFrame) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    calculateDrag = false
+                                }
                                 model.won = true
                             }
                         }
                         .onEnded { gesture in
                             withAnimation(animation) {
                                 model.dragOffset = .zero
+                                calculateDrag = false
                             }
                         }
                 )
