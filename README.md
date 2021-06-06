@@ -12,7 +12,8 @@ The drag is mostly done with a `DragGesture` and updating the `offset` of a View
 <tr>
 <td> 
 
-![preview](./images/DragDropGame.gif)
+<img src="https://github.com/renefx/swiftui_learn/blob/main/images/DragDropGame.gif" width="250">
+    
 </td>
 <td>
 
