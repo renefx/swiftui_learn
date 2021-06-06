@@ -1,5 +1,5 @@
 //
-//  MoveCircle.swift
+//  GeometryReaderStateUpdate.swift
 //  SwiftUI Learn
 //
 //  Created by Rene Freire Xavier on 05/06/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GenericList: View {
+struct GeometryReaderStateUpdate: View {
     @State var timesCalled = 0
     
     // Validation to only get the frame once
@@ -21,7 +21,7 @@ struct GenericList: View {
                 return Color.clear
             }
         } else {
-            Color.black
+            EmptyView()
         }
     }
 
@@ -35,8 +35,8 @@ struct GenericList: View {
     }
 }
 
-struct MoveCircle_Previews: PreviewProvider {
+struct GeometryReaderStateUpdate_Previews: PreviewProvider {
     static var previews: some View {
-        GenericList()
+        GeometryReaderStateUpdate()
     }
 }

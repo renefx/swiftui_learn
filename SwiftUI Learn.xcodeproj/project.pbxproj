@@ -23,7 +23,7 @@
 		02D897A82669FEA100C9F8FF /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A72669FEA100C9F8FF /* TargetView.swift */; };
 		02D897AA2669FF0300C9F8FF /* DragObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897A92669FF0300C9F8FF /* DragObjectView.swift */; };
 		02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897AB2669FF6400C9F8FF /* WinMessage.swift */; };
-		02D89810266C5AC700C9F8FF /* MoveCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8980F266C5AC700C9F8FF /* MoveCircle.swift */; };
+		02D89810266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8980F266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift */; };
 		02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADCD266179D70013702F /* SwiftUI_LearnApp.swift */; };
 		02F7ADD0266179D70013702F /* DragDropGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F7ADCF266179D70013702F /* DragDropGameView.swift */; };
 		02F7ADD2266179DC0013702F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F7ADD1266179DC0013702F /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 		02D897A72669FEA100C9F8FF /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 		02D897A92669FF0300C9F8FF /* DragObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragObjectView.swift; sourceTree = "<group>"; };
 		02D897AB2669FF6400C9F8FF /* WinMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinMessage.swift; sourceTree = "<group>"; };
-		02D8980F266C5AC700C9F8FF /* MoveCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCircle.swift; sourceTree = "<group>"; };
+		02D8980F266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderStateUpdate.swift; sourceTree = "<group>"; };
 		02F7ADCA266179D70013702F /* SwiftUI Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F7ADCD266179D70013702F /* SwiftUI_LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_LearnApp.swift; sourceTree = "<group>"; };
 		02F7ADCF266179D70013702F /* DragDropGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropGameView.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			children = (
 				02D897AD2669FF9900C9F8FF /* Game */,
 				025E18D22668AAEE00AB894E /* ViewOverAnother.swift */,
-				02D8980F266C5AC700C9F8FF /* MoveCircle.swift */,
+				02D8980F266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift */,
 			);
 			path = "Drag and drop";
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */,
 				02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */,
 				025E18D32668AAEE00AB894E /* ViewOverAnother.swift in Sources */,
-				02D89810266C5AC700C9F8FF /* MoveCircle.swift in Sources */,
+				02D89810266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift in Sources */,
 				02D8979B266959A600C9F8FF /* WideTextTitle.swift in Sources */,
 				0234C2E42667FB0D00D9FFB7 /* TransparentGradient.swift in Sources */,
 				0234C2E926680E7800D9FFB7 /* BlurredCircle.swift in Sources */,
