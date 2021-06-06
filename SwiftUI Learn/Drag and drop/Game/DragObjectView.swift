@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DragObjectView: View {
     @ObservedObject var model: DragViewModel
+    @State private var calculateDrag = false
     
     private let animation = Animation.easeOut(duration: 0.2)
     
@@ -17,18 +18,27 @@ struct DragObjectView: View {
         Color(#colorLiteral(red: 0.3968602419, green: 0.4324681163, blue: 0.9220615029, alpha: 1)),
         Color(#colorLiteral(red: 0.7347484827, green: 0.2661170661, blue: 0.9037510753, alpha: 1))]
     
+    @ViewBuilder
+    func geometryReader() -> some View {
+        if calculateDrag {
+            GeometryReader { geometry -> Color in
+                DispatchQueue.main.async {
+                    model.objectFrame = geometry.frame(in: .global) // in window
+                }
+                return Color.clear
+            }
+        } else {
+            EmptyView()
+        }
+    }
+    
     var body: some View {
         ZStack() {
             
             GradientCircle(colors: circleColors)
                 .frame(width: 80)
                 .overlay(
-                    GeometryReader { geometry -> Color in
-                        DispatchQueue.main.async {
-                            model.objectFrame = geometry.frame(in: .global) // in window
-                        }
-                        return Color.clear
-                    }
+                    geometryReader()
                 )
                 .overlay(
                     Text("DRAG")
