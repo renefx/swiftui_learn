@@ -22,7 +22,7 @@ struct PopupView: View {
                 Text("Wow, what a beautiful screen".uppercased())
                     .font(.caption)
                 
-                Text("This could be your body text. If you are enjoying this video, like and subscribe.")
+                Text("This could be your body text. If you are enjoying this repo, drop a star. 😉")
                     .font(.footnote)
             }
             .padding()
