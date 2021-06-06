@@ -1,4 +1,4 @@
-# SwiftUI Learn
+# `SwiftUI` Learn
 Welcome to my cookbook with awesome Views and studies all developed in SwiftUI.
 
 If you have liked the content drop a star ⭐️, more SwiftUI code to come!
@@ -8,14 +8,7 @@ This is a "game" drag a view and drop into another. The objective is to analyse 
 The drag is mostly done with a `DragGesture` and updating the `offset` of a View.
 
 ### DragObjectView.swift
-<table>
-<tr>
-<td> 
-
 <img src="https://github.com/renefx/swiftui_learn/blob/main/images/DragDropGame.gif" width="250">
-    
-</td>
-<td>
 
 ```
 GradientCircle(colors: circleColors)
@@ -48,11 +41,6 @@ GradientCircle(colors: circleColors)
             }
     )
 ```
-
-</td>
-</tr>
-</table>
-
 
 ## GeometryReader State Update loop
 
