@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DragObjectView: View {
     @ObservedObject var model: DragViewModel
-    @State private var calculateDrag = false
+    @State private var calculateFrame = false
     
     private let animation = Animation.easeOut(duration: 0.2)
     
@@ -20,7 +20,7 @@ struct DragObjectView: View {
     
     @ViewBuilder
     func geometryReader() -> some View {
-        if calculateDrag {
+        if calculateFrame {
             GeometryReader { geometry -> Color in
                 DispatchQueue.main.async {
                     model.objectFrame = geometry.frame(in: .global) // in window
@@ -49,10 +49,10 @@ struct DragObjectView: View {
                     DragGesture()
                         .onChanged { gesture in
                             model.dragOffset = gesture.translation
-                            calculateDrag = true
+                            calculateFrame = true
                             if model.isAbove(model.objectFrame, model.targetFrame) {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    calculateDrag = false
+                                    calculateFrame = false
                                 }
                                 model.won = true
                             }
@@ -60,7 +60,7 @@ struct DragObjectView: View {
                         .onEnded { gesture in
                             withAnimation(animation) {
                                 model.dragOffset = .zero
-                                calculateDrag = false
+                                calculateFrame = false
                             }
                         }
                 )
