@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct DragObjectView: View {
     @ObservedObject var model: DragViewModel
@@ -48,12 +49,17 @@ struct DragObjectView: View {
                 .gesture(
                     DragGesture()
                         .onChanged { gesture in
+                            guard !model.won else {
+                                return
+                            }
                             model.dragOffset = gesture.translation
                             calculateFrame = true
                             if model.isAbove(model.objectFrame, model.targetFrame) {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                     calculateFrame = false
+                                    model.dragOffset = .zero
                                 }
+                                UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
                                 model.won = true
                             }
                         }

@@ -31,7 +31,7 @@ struct DragDropGameView: View {
                 TargetView(model: model)
                 DragObjectView(model: model)
             }
-        }
+        }.animation(.default)
     }
 }
 
