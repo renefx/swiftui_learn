@@ -22,15 +22,6 @@ struct ColoredText: View {
     }
 }
 
-extension View {
-    public func gradientForeground(colors: [Color]) -> some View {
-        self.overlay(LinearGradient(gradient: .init(colors: colors),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing))
-            .mask(self)
-    }
-}
-
 struct ColoredText_Previews: PreviewProvider {
     static var previews: some View {
         ColoredText(text: "Hello, visitor", textColors: [.red, .blue, .gray], background: Color(#colorLiteral(red: 0.6500930786, green: 0.9558833241, blue: 0.9664952159, alpha: 1)))
