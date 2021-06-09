@@ -15,6 +15,7 @@
 		02B87B6A26706A52005D23A8 /* OverlayRabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6926706A52005D23A8 /* OverlayRabbit.swift */; };
 		02B87B6C26706C33005D23A8 /* Trapeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6B26706C33005D23A8 /* Trapeze.swift */; };
 		02B87B6E26706C72005D23A8 /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6D26706C72005D23A8 /* Shape+Extension.swift */; };
+		02B87B7126706E33005D23A8 /* SemiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B7026706E33005D23A8 /* SemiCircle.swift */; };
 		02D897942669468D00C9F8FF /* GlassmorphismII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897932669468D00C9F8FF /* GlassmorphismII.swift */; };
 		02D89797266948DF00C9F8FF /* GradientCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D89796266948DF00C9F8FF /* GradientCircle.swift */; };
 		02D897992669517100C9F8FF /* CardGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897982669517100C9F8FF /* CardGlass.swift */; };
@@ -47,6 +48,7 @@
 		02B87B6926706A52005D23A8 /* OverlayRabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayRabbit.swift; sourceTree = "<group>"; };
 		02B87B6B26706C33005D23A8 /* Trapeze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapeze.swift; sourceTree = "<group>"; };
 		02B87B6D26706C72005D23A8 /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
+		02B87B7026706E33005D23A8 /* SemiCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircle.swift; sourceTree = "<group>"; };
 		02D897932669468D00C9F8FF /* GlassmorphismII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassmorphismII.swift; sourceTree = "<group>"; };
 		02D89796266948DF00C9F8FF /* GradientCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircle.swift; sourceTree = "<group>"; };
 		02D897982669517100C9F8FF /* CardGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGlass.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				02F7ADE22661D3E30013702F /* DynamicList.swift */,
 				02D89811266D316800C9F8FF /* CreateAccountForm.swift */,
 				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
+				02B87B7026706E33005D23A8 /* SemiCircle.swift */,
 				02B87B6F26706D8A005D23A8 /* Shadows */,
 				02D89813266D440300C9F8FF /* MagicShow.swift */,
 				02D89817266D780B00C9F8FF /* Extensions */,
@@ -312,6 +315,7 @@
 				02D8979B266959A600C9F8FF /* WideTextTitle.swift in Sources */,
 				0234C2E42667FB0D00D9FFB7 /* TransparentGradient.swift in Sources */,
 				0234C2E926680E7800D9FFB7 /* BlurredCircle.swift in Sources */,
+				02B87B7126706E33005D23A8 /* SemiCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
