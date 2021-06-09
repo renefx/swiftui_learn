@@ -33,18 +33,17 @@ struct DragObjectView: View {
         }
     }
     
+    let textDrag = Text("DRAG")
+                    .fontWeight(.black)
+                    .foregroundColor(.white)
+    
     var body: some View {
         ZStack() {
             
             GradientCircle(colors: circleColors)
                 .frame(width: 80)
-                .overlay(
-                    geometryReader()
-                )
-                .overlay(
-                    Text("DRAG")
-                        .fontWeight(.black)
-                        .foregroundColor(.white))
+                .overlay(geometryReader())
+                .overlay(textDrag)
                 .offset(model.dragOffset)
                 .gesture(
                     DragGesture()
