@@ -122,6 +122,15 @@
 			path = Glassmorphism;
 			sourceTree = "<group>";
 		};
+		02B87B6F26706D8A005D23A8 /* Shadows */ = {
+			isa = PBXGroup;
+			children = (
+				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
+				02B87B6926706A52005D23A8 /* OverlayRabbit.swift */,
+			);
+			path = Shadows;
+			sourceTree = "<group>";
+		};
 		02D897952669481000C9F8FF /* Glassmorphism II */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,8 +196,7 @@
 				02F7ADE22661D3E30013702F /* DynamicList.swift */,
 				02D89811266D316800C9F8FF /* CreateAccountForm.swift */,
 				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
-				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
-				02B87B6926706A52005D23A8 /* OverlayRabbit.swift */,
+				02B87B6F26706D8A005D23A8 /* Shadows */,
 				02D89813266D440300C9F8FF /* MagicShow.swift */,
 				02D89817266D780B00C9F8FF /* Extensions */,
 				025E18CF26688DF500AB894E /* Drag and drop */,
