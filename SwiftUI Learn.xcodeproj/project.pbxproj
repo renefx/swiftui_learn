@@ -13,6 +13,8 @@
 		028DCC402665CE660052694D /* Glassmorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DCC3F2665CE660052694D /* Glassmorphism.swift */; };
 		028DCC432665CEEB0052694D /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DCC422665CEEB0052694D /* PopupView.swift */; };
 		02B87B6A26706A52005D23A8 /* OverlayRabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6926706A52005D23A8 /* OverlayRabbit.swift */; };
+		02B87B6C26706C33005D23A8 /* Trapeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6B26706C33005D23A8 /* Trapeze.swift */; };
+		02B87B6E26706C72005D23A8 /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6D26706C72005D23A8 /* Shape+Extension.swift */; };
 		02D897942669468D00C9F8FF /* GlassmorphismII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897932669468D00C9F8FF /* GlassmorphismII.swift */; };
 		02D89797266948DF00C9F8FF /* GradientCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D89796266948DF00C9F8FF /* GradientCircle.swift */; };
 		02D897992669517100C9F8FF /* CardGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897982669517100C9F8FF /* CardGlass.swift */; };
@@ -43,6 +45,8 @@
 		028DCC3F2665CE660052694D /* Glassmorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassmorphism.swift; sourceTree = "<group>"; };
 		028DCC422665CEEB0052694D /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		02B87B6926706A52005D23A8 /* OverlayRabbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayRabbit.swift; sourceTree = "<group>"; };
+		02B87B6B26706C33005D23A8 /* Trapeze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapeze.swift; sourceTree = "<group>"; };
+		02B87B6D26706C72005D23A8 /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
 		02D897932669468D00C9F8FF /* GlassmorphismII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassmorphismII.swift; sourceTree = "<group>"; };
 		02D89796266948DF00C9F8FF /* GradientCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircle.swift; sourceTree = "<group>"; };
 		02D897982669517100C9F8FF /* CardGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGlass.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				02F7ADE22661D3E30013702F /* DynamicList.swift */,
 				02D89811266D316800C9F8FF /* CreateAccountForm.swift */,
 				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
+				02B87B6D26706C72005D23A8 /* Shape+Extension.swift */,
+				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
 				02B87B6926706A52005D23A8 /* OverlayRabbit.swift */,
 				02D89813266D440300C9F8FF /* MagicShow.swift */,
 				02D89817266D780B00C9F8FF /* Extensions */,
@@ -281,6 +287,7 @@
 				02D89819266E4B9D00C9F8FF /* Neuromorphism.swift in Sources */,
 				02D89797266948DF00C9F8FF /* GradientCircle.swift in Sources */,
 				02F7ADE32661D3E30013702F /* DynamicList.swift in Sources */,
+				02B87B6E26706C72005D23A8 /* Shape+Extension.swift in Sources */,
 				028DCC402665CE660052694D /* Glassmorphism.swift in Sources */,
 				02D89812266D316800C9F8FF /* CreateAccountForm.swift in Sources */,
 				02D897A82669FEA100C9F8FF /* TargetView.swift in Sources */,
@@ -290,6 +297,7 @@
 				028DCC432665CEEB0052694D /* PopupView.swift in Sources */,
 				02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */,
 				02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */,
+				02B87B6C26706C33005D23A8 /* Trapeze.swift in Sources */,
 				025E18D32668AAEE00AB894E /* ViewOverAnother.swift in Sources */,
 				02D89810266C5AC700C9F8FF /* GeometryReaderStateUpdate.swift in Sources */,
 				02D89814266D440300C9F8FF /* MagicShow.swift in Sources */,
