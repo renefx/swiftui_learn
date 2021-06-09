@@ -158,6 +158,7 @@
 		02D89817266D780B00C9F8FF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				02B87B6D26706C72005D23A8 /* Shape+Extension.swift */,
 				02D89815266D77F400C9F8FF /* SwiftUIView+Extension.swift */,
 			);
 			path = Extensions;
@@ -186,7 +187,6 @@
 				02F7ADE22661D3E30013702F /* DynamicList.swift */,
 				02D89811266D316800C9F8FF /* CreateAccountForm.swift */,
 				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
-				02B87B6D26706C72005D23A8 /* Shape+Extension.swift */,
 				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
 				02B87B6926706A52005D23A8 /* OverlayRabbit.swift */,
 				02D89813266D440300C9F8FF /* MagicShow.swift */,
