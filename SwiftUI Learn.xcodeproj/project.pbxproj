@@ -17,6 +17,7 @@
 		02B87B6E26706C72005D23A8 /* Shape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B6D26706C72005D23A8 /* Shape+Extension.swift */; };
 		02B87B7126706E33005D23A8 /* SemiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B7026706E33005D23A8 /* SemiCircle.swift */; };
 		02B87B7326706E72005D23A8 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B7226706E72005D23A8 /* ArcView.swift */; };
+		02B87B962671945E005D23A8 /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B87B952671945E005D23A8 /* AnimatedGradient.swift */; };
 		02D897942669468D00C9F8FF /* GlassmorphismII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897932669468D00C9F8FF /* GlassmorphismII.swift */; };
 		02D89797266948DF00C9F8FF /* GradientCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D89796266948DF00C9F8FF /* GradientCircle.swift */; };
 		02D897992669517100C9F8FF /* CardGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D897982669517100C9F8FF /* CardGlass.swift */; };
@@ -51,6 +52,7 @@
 		02B87B6D26706C72005D23A8 /* Shape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Extension.swift"; sourceTree = "<group>"; };
 		02B87B7026706E33005D23A8 /* SemiCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircle.swift; sourceTree = "<group>"; };
 		02B87B7226706E72005D23A8 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		02B87B952671945E005D23A8 /* AnimatedGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
 		02D897932669468D00C9F8FF /* GlassmorphismII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassmorphismII.swift; sourceTree = "<group>"; };
 		02D89796266948DF00C9F8FF /* GradientCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircle.swift; sourceTree = "<group>"; };
 		02D897982669517100C9F8FF /* CardGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGlass.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		0234C2E22667FAC000D9FFB7 /* Gradient */ = {
 			isa = PBXGroup;
 			children = (
+				02B87B9426719363005D23A8 /* Animated Gradient */,
 				02D897952669481000C9F8FF /* Glassmorphism II */,
 				028DCC412665CE9A0052694D /* Glassmorphism */,
 				0234C2E52668083500D9FFB7 /* Simple Gradient */,
@@ -129,12 +132,29 @@
 		02B87B6F26706D8A005D23A8 /* Shadows */ = {
 			isa = PBXGroup;
 			children = (
-				02B87B7226706E72005D23A8 /* ArcView.swift */,
-				02B87B7026706E33005D23A8 /* SemiCircle.swift */,
-				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
+				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
+				02B87B932671929B005D23A8 /* Custom Buttons */,
 				02B87B6926706A52005D23A8 /* OverlayRabbit.swift */,
 			);
 			path = Shadows;
+			sourceTree = "<group>";
+		};
+		02B87B932671929B005D23A8 /* Custom Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				02B87B7226706E72005D23A8 /* ArcView.swift */,
+				02B87B7026706E33005D23A8 /* SemiCircle.swift */,
+				02B87B6B26706C33005D23A8 /* Trapeze.swift */,
+			);
+			path = "Custom Buttons";
+			sourceTree = "<group>";
+		};
+		02B87B9426719363005D23A8 /* Animated Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				02B87B952671945E005D23A8 /* AnimatedGradient.swift */,
+			);
+			path = "Animated Gradient";
 			sourceTree = "<group>";
 		};
 		02D897952669481000C9F8FF /* Glassmorphism II */ = {
@@ -201,7 +221,6 @@
 				02F7ADCD266179D70013702F /* SwiftUI_LearnApp.swift */,
 				02F7ADE22661D3E30013702F /* DynamicList.swift */,
 				02D89811266D316800C9F8FF /* CreateAccountForm.swift */,
-				02D89818266E4B9D00C9F8FF /* Neuromorphism.swift */,
 				02B87B6F26706D8A005D23A8 /* Shadows */,
 				02D89813266D440300C9F8FF /* MagicShow.swift */,
 				02D89817266D780B00C9F8FF /* Extensions */,
@@ -309,6 +328,7 @@
 				02D897A62669FB0400C9F8FF /* DragViewModel.swift in Sources */,
 				02D897992669517100C9F8FF /* CardGlass.swift in Sources */,
 				02D897AA2669FF0300C9F8FF /* DragObjectView.swift in Sources */,
+				02B87B962671945E005D23A8 /* AnimatedGradient.swift in Sources */,
 				028DCC432665CEEB0052694D /* PopupView.swift in Sources */,
 				02F7ADCE266179D70013702F /* SwiftUI_LearnApp.swift in Sources */,
 				02D897AC2669FF6400C9F8FF /* WinMessage.swift in Sources */,
