@@ -5,7 +5,7 @@ If you have liked the content drop a star ⭐️, more SwiftUI code to come!
 
 ## Drag and drop game
 This is a "game" drag a view and drop into another. The objective is to analyse how to use the drag gesture in SwiftUI and also to get the frame of a View and update a state while doing it.
-The drag is mostly done with a `DragGesture` and updating the `offset` of a View.
+The drag is mostly done using a `DragGesture` and updating the `offset` of a View.
 
 ### DragObjectView.swift
 <img src="https://github.com/renefx/swiftui_learn/blob/main/images/DragDropGame.gif" width="250">
