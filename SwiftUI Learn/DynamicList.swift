@@ -10,14 +10,11 @@ import SwiftUI
 struct DynamicList: View {
     var body: some View {
         VStack {
-            Spacer()
-                .background(Color.yellow)
             Text("Select a color page from the links.")
                 .background(Color.yellow)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: -40, trailing: 0))
-                .zIndex(1.0)
             NavigationView {
                 ListNavigation()
+                    .navigationTitle("Lista")
             }
         }
     }
@@ -41,6 +38,7 @@ struct DestinationPageView: View {
 
 struct ListNavigation: View {
     @State private var scale: CGFloat = 1.0
+    private var colors: [Color] = [.purple, .pink, .orange]
     
     var body: some View {
         List {
@@ -66,24 +64,12 @@ struct ListNavigation: View {
             ) {
                 Text("Orange Page")
             }
-            Text("Orange Page")
-                .frame(height: 80)
-                .background(Color.orange)
-                .scaleEffect(scale)
-                .gesture(
-                    TapGesture()
-                        .onEnded { _ in
-                            scale -= 0.1
-                        }
-                )
-            Text("Orange Page").frame(height: 80)
-            Text("Orange Page").frame(height: 80)
-            Text("Orange Page").frame(height: 80)
-            Text("Orange Page").frame(height: 80)
-            Text("Orange Page").frame(height: 80)
-            Text("Orange Page last").frame(height: 80)
+            ForEach(colors.indices) { index in
+                Text("Orange Page \(index)").frame(height: 80)
+            }
         }
     }
+    
 }
 // Views só podem ter no máximo 12 views dentro delas. Isso serve para criar componentes melhores. Se tiver mais, crie um componente
 
@@ -91,10 +77,12 @@ struct ListNavigation: View {
 // @State
 // Views são construidas e destruidas toda hora. Mão de obra barata. Ao colocar state, isso indica que essa variável não vai mudar ao ser reconstruído. Não funciona para classes pois classes não são reconstruídas
 // recomendado serem private
+// Use @State when your view needs to mutate one of its own properties.
 //---------------
 // @Binding
 // Uma View indica que precisa de um Binding. Isso significa que a variável marcada com binding sempre terá o mesmo valor que a que foi passada a ela.
-// Para passar uma variáel como Binding é necessário indicar com um $ na frente do nome da variável
+// Para passar uma variável como Binding é necessário indicar com um $ na frente do nome da variável
+// Use @Binding when your view needs to mutate a property owned by an ancestor view, or owned by an observable object that an ancestor has a reference to.
 //---------------
 // @ObservedObject
 // Observa uma classe. Assim que seus valores mudam, invalida a View
