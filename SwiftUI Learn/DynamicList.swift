@@ -9,12 +9,12 @@ import SwiftUI
 
 struct DynamicList: View {
     var body: some View {
-        VStack {
+        ZStack {
             Text("Select a color page from the links.")
                 .background(Color.yellow)
             NavigationView {
                 ListNavigation()
-                    .navigationTitle("Lista")
+//                    .navigationBarHidden(true)
             }
         }
     }
@@ -31,13 +31,17 @@ struct DestinationPageView: View {
     var message: String = "Tela Detalhe"
     var body: some View {
         Text(message)
+            .lineLimit(3)
             .font(.title)
             .foregroundColor(color)
+            .navigationTitle("Oi")
+//            .navigationBarHidden(true)
     }
 }
 
 struct ListNavigation: View {
     @State private var scale: CGFloat = 1.0
+    @State private var bounds: CGRect = .zero
     private var colors: [Color] = [.purple, .pink, .orange]
     
     var body: some View {
@@ -46,7 +50,13 @@ struct ListNavigation: View {
                 destination:
                     DestinationPageView(color: .purple)
             ) {
-                Text("Purple Page")
+                Text("Purple Page 1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj")
+                    .lineLimit(3)
+            }
+            .background(Color.red)
+            .background(GeometryGetter(rect: $bounds))
+            .onTapGesture {
+                print(bounds)
             }
             NavigationLink(
                 destination:
@@ -62,7 +72,7 @@ struct ListNavigation: View {
                         color: .orange,
                         message: "Menu 1")
             ) {
-                Text("Orange Page")
+                Text("Orange Page 1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj1 jhkljlkjkl 2jhkjhjkhjkh 3 kjhjkhjkhkhkjhkjh 4kjhjkhkjhkjh 5 kjhkjhjkhkj")
             }
             ForEach(colors.indices) { index in
                 Text("Orange Page \(index)").frame(height: 80)
@@ -70,6 +80,22 @@ struct ListNavigation: View {
         }
     }
     
+}
+
+struct GeometryGetter: View {
+    @Binding var rect: CGRect
+
+    var body: some View {
+        GeometryReader { geometry in
+            Group { () -> AnyView in
+                DispatchQueue.main.async {
+                    self.rect = geometry.frame(in: .global)
+                }
+
+                return AnyView(Color.clear)
+            }
+        }
+    }
 }
 // Views só podem ter no máximo 12 views dentro delas. Isso serve para criar componentes melhores. Se tiver mais, crie um componente
 
